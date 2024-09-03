@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de funcionamento de válvula (derivações ventriculares e derivações lombares)</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script_valvula.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <!-- Título da Página -->
+    <h1>Avaliação de funcionamento de válvula (derivações ventriculares e derivações lombares)</h1>
+
+    <!-- Texto de Instrução -->
+    <p>
+      Realize a monitorização com o paciente deitado a 0º por 5 minutos, após este tempo, monitore por mais 5 minutos com o paciente na posição em pé ou com inclinação entre 30 e 75º por mais 5 minutos e insira os valores médios obtidos abaixo.
+    </p>
+
+    <!-- Campos para Preenchimento -->
+    <div class="input-group">
+      <label for="t4q1">Razão P2/P1 com o paciente deitado a 0º:</label>
+      <input type="number" id="t4q1" step="0.01" min="0" placeholder="Digite a razão P2/P1 deitado a 0º">
+    </div>
+
+    <div class="input-group">
+      <label for="t4q2">Razão P2/P1 com o paciente deitado com inclinação ou em pé:</label>
+      <input type="number" id="t4q2" step="0.01" min="0" placeholder="Digite a razão P2/P1 inclinado ou em pé">
+    </div>
+
+    <!-- Mensagens Dinâmicas -->
+    <div id="messages"></div>
+
+    <!-- Botões de Ação -->
+    <div class="button-container">
+      <button class="btn-voltar" id="btn-voltar" onclick="voltar()">Voltar</button>
+    </div>
+  </div>
+</body>
+
+</html>

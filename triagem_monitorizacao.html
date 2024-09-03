@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triagem e acompanhamento de risco de hipertensão intracraniana em pacientes críticos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <!-- Título da Página -->
+    <h1>Triagem e acompanhamento de risco de hipertensão intracraniana em pacientes críticos</h1>
+
+    <!-- Campos para Preenchimento -->
+    <div class="input-group">
+      <label for="t2q1">Gênero do paciente:</label>
+      <select id="t2q1">
+        <option value="">Selecione</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Masculino">Masculino</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="t2q2">Idade do paciente:</label>
+      <input type="number" id="t2q2" min="0" placeholder="Digite a idade">
+    </div>
+
+    <div class="input-group">
+      <label for="t2q3">Valor da razão P2/P1:</label>
+      <input type="number" id="t2q3" step="0.01" min="0" placeholder="Digite o valor de P2/P1">
+    </div>
+
+    <div class="input-group">
+      <label for="t2q4">Qual o valor do TTP:</label>
+      <input type="number" id="t2q4" step="0.01" min="0" placeholder="Digite o valor do TTP">
+    </div>
+
+    <!-- Mensagens Dinâmicas -->
+    <div id="messages"></div>
+
+    <!-- Tabela após Passo 1 (Aparece Condicionalmente) -->
+    <div id="tabela-fatores" style="display: none;">
+      <h3>Passo 1: Avalie os seguintes fatores, corrija caso necessário, e refaça a monitorização:</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Causa</th>
+            <th>Mecanismo</th>
+            <th>Solução</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mau funcionamento das tecnologias de monitoramento de PIC</td>
+            <td>Erros de calibração, fenômenos de desvio zero</td>
+            <td>Avaliar substituição do dispositivo de PIC</td>
+          </tr>
+          <tr>
+            <td>Hematoma intracraniano</td>
+            <td>Lesões ocupando espaço</td>
+            <td>Considerar neurocirurgia. Consultar neurocirurgiões.</td>
+          </tr>
+          <tr>
+            <td>Obstrução das vias aéreas (tubo endotraqueal dobrado, língua, retenção de escarro) pneumotórax</td>
+            <td>Obstrução ao fluxo venoso, aumento de PaCO2</td>
+            <td>Verificar o tubo. Aspirar secreções. Procurar PNX e drenar se necessário.</td>
+          </tr>
+          <tr>
+            <td>Hipóxia</td>
+            <td>PaO2 &lt; 60 mmHg pode causar insulto hipóxico secundário e vasodilatação cerebral</td>
+            <td>Aumentar FiO2 enquanto corrige a causa da hipóxia</td>
+          </tr>
+          <tr>
+            <td>Hipercapnia (hipoventilação)</td>
+            <td>Vasodilatação cerebral</td>
+            <td>Aumentar a ventilação (preferencialmente aumentar a frequência ventilatória)</td>
+          </tr>
+          <tr>
+            <td>Dor, sedação, tosse/esforço</td>
+            <td>Aumento do metabolismo e transmissão direta de pressão</td>
+            <td>Otimizar a sedação</td>
+          </tr>
+          <tr>
+            <td>Hipotensão (hipovolemia, sedação, cardíaco)</td>
+            <td>Redução do fluxo sanguíneo cerebral se a auto-regulação de pressão estiver comprometida</td>
+            <td>Avaliar a volemia (com eco ou outras técnicas). Infundir fluidos se necessário e usar vasopressores precocemente</td>
+          </tr>
+          <tr>
+            <td>Hipertensão</td>
+            <td>Aumento do fluxo sanguíneo cerebral se a auto-regulação de pressão estiver comprometida</td>
+            <td>Avaliar a adequação da sedação e eventualmente usar medicamento anti-hipertensivo</td>
+          </tr>
+          <tr>
+            <td>Postura (posição de Trendelenburg, rotação do pescoço)</td>
+            <td>Redução do fluxo venoso</td>
+            <td>Corrigir o problema com os enfermeiros</td>
+          </tr>
+          <tr>
+            <td>Hiperpirexia</td>
+            <td>Aumento do metabolismo cerebral</td>
+            <td>Iniciar antipiréticos rapidamente</td>
+          </tr>
+          <tr>
+            <td>Convulsões</td>
+            <td>Aumento do metabolismo cerebral</td>
+            <td>Monitorar e tratar convulsões prontamente</td>
+          </tr>
+          <tr>
+            <td>Hipo-osmolalidade (sódio, proteína)</td>
+            <td>Edema cerebral</td>
+            <td>Infundir soluções hipertônicas</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Passo 2 -->
+    <div id="passo-2" style="display: none;">
+      <h3>Passo 2: Avalie agora as seguintes medidas, corrija caso necessário, e refaça a monitorização.</h3>
+      <ul>
+        <li>Cabeça elevada a 15-30°</li>
+        <li>Sedação</li>
+        <li>Analgesia</li>
+        <li>Hipocapnia leve</li>
+        <li>Mantenha a pressão de perfusão cerebral (50-70 mmHg de acordo com o status de autorregulação)</li>
+        <li>Avalie se o ajuste da PAM contribui com a melhora da razão P2/P1 ou com o fluxo sanguíneo cerebral</li>
+        <li>Normotermia</li>
+        <li>Euvolemia</li>
+      </ul>
+      <p>Avalie junto a equipe de neurocirurgia se o caso é cirúrgico.</p>
+    </div>
+
+    <!-- Passo 3 -->
+    <div id="passo-3" style="display: none;">
+      <h3>Passo 3: Avalie agora as seguintes medidas, corrija caso necessário, e refaça a monitorização.</h3>
+      <ul>
+        <li>Aumentar a sedação</li>
+        <li>Drenagem de líquor</li>
+        <li>Osmoterapia (manitol ou solução hipertônica)</li>
+        <li>Hipocapnia leve</li>
+        <li>Otimizar PPC</li>
+        <li>Avalie se o ajuste da PAM contribui com a melhora da razão P2/P1 ou com o fluxo sanguíneo cerebral</li>
+        <li>Considere repetir uma tomografia computadorizada (TC)</li>
+      </ul>
+      <p>Avalie junto a equipe de neurocirurgia se o caso é cirúrgico.</p>
+    </div>
+
+    <!-- Passo 4 -->
+    <div id="passo-4" style="display: none;">
+      <h3>Passo 4: Avalie agora as seguintes medidas, corrija caso necessário, e refaça a monitorização.</h3>
+      <ul>
+        <li>Hipocapnia profunda com monitor de oxigênio cerebral</li>
+        <li>Doses mais altas de osmóticos</li>
+        <li>Otimizar PPC</li>
+        <li>Avalie se o ajuste da PAM contribui com a melhora da razão P2/P1 ou com o fluxo sanguíneo cerebral</li>
+        <li>Considere repetir uma TC</li>
+      </ul>
+      <p>Avalie junto à equipe de neurocirurgia se o caso é cirúrgico.</p>
+    </div>
+
+    <!-- Passo 5 -->
+    <div id="passo-5" style="display: none;">
+      <h3>Passo 5: Avalie agora as seguintes medidas, corrija caso necessário, e refaça a monitorização.</h3>
+      <ul>
+        <li>Uso de barbitúricos e hiperventilação para 'ganhar tempo' antes da craniectomia descompressiva</li>
+      </ul>
+      <p>Considere, antes de usar terapias extremas, o prognóstico do paciente, o melhor resultado que pode ser obtido, a vontade do paciente e informe a família do paciente.</p>
+      <p>Avalie junto a equipe de neurocirurgia se o caso é cirúrgico.</p>
+    </div>
+
+    <!-- Passo Final -->
+    <div id="passo-final" style="display: none;">
+      <h3>Passo Final:</h3>
+      <p>Mantenha medidas de neuroproteção e repita frequentemente a monitorização para continuar acompanhando a evolução do paciente.<br>Busque a opinião de especialistas sobre o caso.</p>
+    </div>
+
+    <!-- Botões de Ação -->
+    <div class="button-container">
+      <button class="btn-voltar" id="t2b1" onclick="reinserirDados()">Reinserir dados do mesmo paciente</button>
+      <button class="btn-voltar" id="t2b2" onclick="novaMonitorizacao()">Realizar a monitorização em um novo paciente</button>
+      <!-- Botões Próximo Passo e Passo Anterior -->
+      <button class="btn-voltar" id="btn-proximo-passo" style="display: none;" onclick="proximoPasso()">Próximo passo</button>
+      <button class="btn-voltar" id="btn-passo-anterior" style="display: none;" onclick="passoAnterior()">Passo anterior</button>
+    </div>
+  </div>
+</body>
+
+</html>

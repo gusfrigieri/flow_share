@@ -1,0 +1,359 @@
+/* Reseta estilos padrões para consistência entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha ao topo */
+  height: 100vh;
+  padding: 20px;
+  position: relative; /* Para posicionar as bandeiras */
+}
+
+#container {
+  max-width: 800px;
+  width: 100%;
+  position: relative; /* Para posicionar os elementos dentro do container */
+  padding-top: 60px; /* Espaço para as bandeiras acima do quadro */
+}
+
+/* Estilo para o contêiner das bandeiras */
+.flags {
+  position: absolute;
+  top: 10px; /* Mantém as bandeiras no topo */
+  left: 20px; /* Canto superior esquerdo */
+  display: flex;
+  gap: 10px;
+}
+
+.flag-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* Tamanho dos emojis */
+  transition: transform 0.2s; /* Animação para hover */
+}
+
+.flag-button:hover {
+  transform: scale(1.2); /* Aumenta o tamanho do emoji no hover */
+}
+
+.quadro {
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.quadro-laranja {
+  background-color: rgba(245, 130, 31, 0.1);
+}
+
+.quadro-azul {
+  background-color: rgba(57, 176, 164, 0.1);
+}
+
+.botao {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao-amarelo {
+  background-color: rgba(245, 130, 31, 0.5);
+}
+
+.botao-vermelho {
+  background-color: rgba(239, 74, 75, 0.5);
+}
+
+.botao-azul-marinho {
+  background-color: #000080; /* Azul marinho */
+  color: white;
+}
+
+.botao:hover {
+  opacity: 0.8;
+}
+
+.texto-informativo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.referencias {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+footer {
+  text-align: right; /* Alinha o texto da versão à direita */
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* Estilo adicional para a nova página */
+
+/* Estilo para o texto alinhado à esquerda */
+.text-left {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Estilo para o texto alinhado ao centro */
+.text-center {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+/* Estilo da Tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead {
+  background-color: rgba(57, 176, 164, 0.1); /* Azul claro translúcido */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Cinza claro */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Branco */
+}
+
+tbody tr:hover {
+  background-color: rgba(57, 176, 164, 0.2); /* Azul claro ao passar o mouse */
+}
+
+/* Estilo para o contêiner do botão */
+.button-container {
+  text-align: center; /* Centraliza o botão */
+  margin-top: 20px;
+}
+
+/* Estilo do Botão Voltar */
+.btn-voltar {
+  background-color: rgb(44, 39, 82); /* Cor RGB especificada */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: rgb(64, 59, 102); /* Cor mais clara ao passar o mouse */
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+
+/* Estilo para o texto de referência com link */
+.referencia-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.referencia-link a {
+  color: #1a0dab; /* Cor padrão para links */
+  text-decoration: none;
+}
+
+.referencia-link a:hover {
+  text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* Estilo para o contêiner das imagens */
+.image-container {
+  text-align: center; /* Centraliza a imagem */
+  margin: 20px 0; /* Espaçamento superior e inferior */
+}
+
+/* Estilo para a imagem centralizada */
+.center-image {
+  max-width: 80%; /* Limita a largura máxima da imagem a 80% da largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Borda arredondada para estética */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+}
+
+/* Estilo para o contêiner do botão */
+.button-container {
+  text-align: center; /* Centraliza o botão */
+  margin-top: 20px;
+}
+
+/* Estilo do Botão Voltar */
+.btn-voltar {
+  background-color: rgb(44, 39, 82); /* Cor RGB especificada */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: rgb(64, 59, 102); /* Cor mais clara ao passar o mouse */
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilo para a lista de itens alinhados à esquerda */
+.text-left {
+  text-align: left; /* Alinha o texto à esquerda */
+  margin: 20px; /* Espaçamento ao redor da lista */
+  font-size: 16px; /* Tamanho da fonte */
+  list-style-type: disc; /* Tipo de marcador para os itens da lista */
+}
+
+/* Estilo para o contêiner do botão */
+.button-container {
+  text-align: center; /* Centraliza o botão */
+  margin-top: 20px;
+}
+
+/* Estilo do Botão Voltar */
+.btn-voltar {
+  background-color: rgb(44, 39, 82); /* Cor RGB especificada */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: rgb(64, 59, 102); /* Cor mais clara ao passar o mouse */
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Estilo para grupos de entrada */
+.input-group {
+  margin: 15px 0;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilo para mensagens dinâmicas */
+#messages {
+  margin: 20px 0;
+}
+
+.message {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.message.red {
+  color: red;
+  font-weight: bold;
+}
+
+.message.green-dark {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.message.green-light {
+  color: lightgreen;
+  font-weight: bold;
+}
+
+.message.orange {
+  color: darkorange;
+  font-weight: bold;
+}
+
+/* Estilo para o contêiner do botão */
+.button-container {
+  text-align: center; /* Centraliza os botões */
+  margin-top: 20px;
+}
+
+/* Estilo do Botão Voltar */
+.btn-voltar {
+  background-color: rgb(44, 39, 82); /* Cor RGB especificada */
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: rgb(64, 59, 102); /* Cor mais clara ao passar o mouse */
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.green-bold {
+  color: green;
+  font-weight: bold;
+}
+
+.red-bold {
+  color: red;
+  font-weight: bold;
+}
+
+.green-bold {
+  color: green;
+  font-weight: bold;
+}
+
+.orange {
+  color: orange;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+}

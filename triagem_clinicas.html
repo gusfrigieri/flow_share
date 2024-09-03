@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triagem e acompanhamento de hipertensão intracraniana em Clínicas, enfermarias e ambulatórios</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script_clinicas.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <!-- Título da Página -->
+    <h1>Triagem e acompanhamento de hipertensão intracraniana em Clínicas, enfermarias e ambulatórios</h1>
+
+    <!-- Campos para Preenchimento -->
+    <div class="input-group">
+      <label for="t2q1">Gênero do paciente:</label>
+      <select id="t2q1">
+        <option value="">Selecione</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Masculino">Masculino</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label for="t2q2">Idade do paciente:</label>
+      <input type="number" id="t2q2" min="0" placeholder="Digite a idade">
+    </div>
+
+    <div class="input-group">
+      <label for="t2q3">Valor da razão P2/P1:</label>
+      <input type="number" id="t2q3" step="0.01" min="0" placeholder="Digite o valor de P2/P1">
+    </div>
+
+    <div class="input-group">
+      <label for="t2q4">Qual o valor do TTP:</label>
+      <input type="number" id="t2q4" step="0.01" min="0" placeholder="Digite o valor do TTP">
+    </div>
+
+    <!-- Mensagens Dinâmicas -->
+    <div id="messages"></div>
+
+    <!-- Botões de Ação -->
+    <div class="button-container">
+      <button class="btn-voltar" id="t2b1" onclick="reinserirDados()">Reinserir dados do mesmo paciente</button>
+      <button class="btn-voltar" id="t2b2" onclick="novaMonitorizacao()">Realizar a monitorização em um novo paciente</button>
+      <button class="btn-voltar" id="btn-voltar" onclick="voltar()">Voltar</button>
+    </div>
+  </div>
+</body>
+
+</html>
